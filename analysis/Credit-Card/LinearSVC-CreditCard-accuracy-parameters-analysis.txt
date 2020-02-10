@@ -1,0 +1,10 @@
+Tuning hyper-parameters for accuracy
+LinearSVC Learning Curve - Credit Card - on accuracy
+Best parameters found on development set:
+{'clf__dual': False, 'clf__max_iter': 10000, 'clf__penalty': 'l1', 'clf__tol': 0.001}
+Detailed classification report:
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+{'0': {'precision': 0.8369421954434193, 'recall': 0.9512090734003852, 'f1-score': 0.8904246794871794, 'support': 4673}, '1': {'precision': 0.6690856313497823, 'recall': 0.3474001507159005, 'f1-score': 0.4573412698412699, 'support': 1327}, 'accuracy': 0.8176666666666667, 'macro avg': {'precision': 0.7530139133966007, 'recall': 0.6493046120581428, 'f1-score': 0.6738829746642246, 'support': 6000}, 'weighted avg': {'precision': 0.79981791868471, 'recall': 0.8176666666666667, 'f1-score': 0.794641065387159, 'support': 6000}}
+[[4445  228]
+ [ 866  461]]

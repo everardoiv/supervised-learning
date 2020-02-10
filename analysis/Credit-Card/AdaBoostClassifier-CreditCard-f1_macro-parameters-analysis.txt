@@ -1,0 +1,10 @@
+Tuning hyper-parameters for f1_macro
+AdaBoostClassifier Learning Curve - Credit Card - on f1_macro
+Best parameters found on development set:
+{'clf__learning_rate': 0.6, 'clf__n_estimators': 100}
+Detailed classification report:
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+{'0': {'precision': 0.8353846153846154, 'recall': 0.9295955488979243, 'f1-score': 0.8799756912792466, 'support': 4673}, '1': {'precision': 0.58875, 'recall': 0.3549359457422758, 'f1-score': 0.4428772919605078, 'support': 1327}, 'accuracy': 0.8025, 'macro avg': {'precision': 0.7120673076923076, 'recall': 0.6422657473201001, 'f1-score': 0.6614264916198772, 'support': 6000}, 'weighted avg': {'precision': 0.7808372596153846, 'recall': 0.8025, 'f1-score': 0.7833040952965854, 'support': 6000}}
+[[4344  329]
+ [ 856  471]]

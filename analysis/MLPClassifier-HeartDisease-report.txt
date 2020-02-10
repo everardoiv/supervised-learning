@@ -1,0 +1,30 @@
+Best parameters set found on development set:
+Pipeline(memory=None,
+         steps=[('transform',
+                 PowerTransformer(copy=True, method='yeo-johnson',
+                                  standardize=True)),
+                ('scale',
+                 RobustScaler(copy=True, quantile_range=(25.0, 75.0),
+                              with_centering=True, with_scaling=True)),
+                ('clf',
+                 MLPClassifier(activation='relu', alpha=1e-05,
+                               batch_size='auto', beta_1=0.9, beta_2=0.999,
+                               early_stopping=False, epsilon=1e-08,
+                               hidden_layer_sizes=(50,),
+                               learning_rate='constant',
+                               learning_rate_init=0.001, max_fun=15000,
+                               max_iter=9000, momentum=0.9, n_iter_no_change=10,
+                               nesterovs_momentum=True, power_t=0.5,
+                               random_state=None, shuffle=True, solver='adam',
+                               tol=0.0001, validation_fraction=0.1,
+                               verbose=False, warm_start=False))],
+         verbose=False)
+Detailed classification report:
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+{'0': {'precision': 0.8709677419354839, 'recall': 0.8181818181818182, 'f1-score': 0.84375, 'support': 33}, '1': {'precision': 0.3333333333333333, 'recall': 0.36363636363636365, 'f1-score': 0.34782608695652173, 'support': 11}, '2': {'precision': 0.5555555555555556, 'recall': 0.7142857142857143, 'f1-score': 0.6250000000000001, 'support': 7}, '3': {'precision': 0.16666666666666666, 'recall': 0.14285714285714285, 'f1-score': 0.15384615384615383, 'support': 7}, '4': {'precision': 0.3333333333333333, 'recall': 0.3333333333333333, 'f1-score': 0.3333333333333333, 'support': 3}, 'accuracy': 0.6229508196721312, 'macro avg': {'precision': 0.45197132616487457, 'recall': 0.47445887445887447, 'f1-score': 0.4607511148272018, 'support': 61}, 'weighted avg': {'precision': 0.6305599623949703, 'recall': 0.6229508196721312, 'f1-score': 0.6249468857941775, 'support': 61}}
+[[27  5  0  0  1]
+ [ 3  4  1  3  0]
+ [ 0  1  5  1  0]
+ [ 1  2  2  1  1]
+ [ 0  0  1  1  1]]

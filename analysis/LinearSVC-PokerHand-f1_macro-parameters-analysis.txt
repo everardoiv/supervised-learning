@@ -1,0 +1,36 @@
+Tuning hyper-parameters for f1_macro
+LinearSVC Learning Curve - Poker Hand - on f1_macro
+Best parameters found on development set:
+{'clf__dual': False, 'clf__fit_intercept': False, 'clf__max_iter': 100000, 'clf__penalty': 'l2', 'clf__tol': 0.0001}
+Best Pipeline:
+Pipeline(memory=None,
+         steps=[('scale',
+                 RobustScaler(copy=True, quantile_range=(25.0, 75.0),
+                              with_centering=True, with_scaling=True)),
+                ('clf',
+                 LinearSVC(C=1.0, class_weight=None, dual=False,
+                           fit_intercept=False, intercept_scaling=1,
+                           loss='squared_hinge', max_iter=100000,
+                           multi_class='ovr', penalty='l2', random_state=None,
+                           tol=0.0001, verbose=0))],
+         verbose=False)
+Detailed classification report:
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+{'0': {'precision': 0.04526748971193416, 'recall': 0.016224188790560472, 'f1-score': 0.023887079261672096, 'support': 678}, '1': {'precision': 0.8842767295597485, 'recall': 0.11703013151323456, 'f1-score': 0.20670391061452514, 'support': 18021}, '2': {'precision': 0.04372744640203778, 'recall': 0.6936026936026936, 'f1-score': 0.08226837060702875, 'support': 891}, '3': {'precision': 0.03382663847780127, 'recall': 0.02711864406779661, 'f1-score': 0.030103480714957668, 'support': 590}, '4': {'precision': 0.01881720430107527, 'recall': 0.051470588235294115, 'f1-score': 0.02755905511811024, 'support': 136}, '5': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 91}, '6': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 78}, '7': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 15}, '8': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 1}, '9': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 0}, 'accuracy': 0.13467635725086582, 'macro avg': {'precision': 0.1025915508452597, 'recall': 0.09054462462095794, 'f1-score': 0.03705218963162939, 'support': 20501}, 'weighted avg': {'precision': 0.7818018785743126, 'recall': 0.13467635725086582, 'f1-score': 0.18711364402968256, 'support': 20501}}
+[[   11    77   464    15     2     0     0    20    27    62]
+ [  214  2109 12421   408   327     4     1   311   544  1682]
+ [    8   104   618    26    13     0     0    14    27    81]
+ [    8    68   414    16    14     0     0    10    18    42]
+ [    2     9    94     4     7     0     0     2     4    14]
+ [    0    10    61     0     0     0     0     0     2    18]
+ [    0     8    47     4     8     0     0     0     1    10]
+ [    0     0    14     0     1     0     0     0     0     0]
+ [    0     0     0     0     0     0     0     0     0     1]
+ [    0     0     0     0     0     0     0     0     0     0]]
+
+-----------
+Cross-Val Accuracy: 0.52 (+/- 0.01)Cross-Val F1 Accuracy: 0.08 (+/- 0.00)
+-----------
+Normalized Accuracy: 0.13
+Non-Normalized Accuracy: 2761.00

@@ -1,0 +1,10 @@
+Tuning hyper-parameters for f1_macro
+MLPClassifier Learning Curve - Credit Card - on f1_macro
+Best parameters found on development set:
+{'clf__alpha': 1e-05, 'clf__hidden_layer_sizes': (50,), 'clf__max_iter': 9000, 'clf__solver': 'adam'}
+Detailed classification report:
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+{'0': {'precision': 0.8418631397354802, 'recall': 0.9398673229188957, 'f1-score': 0.8881698685540951, 'support': 4673}, '1': {'precision': 0.6411238825031929, 'recall': 0.37829691032403917, 'f1-score': 0.4758293838862559, 'support': 1327}, 'accuracy': 0.8156666666666667, 'macro avg': {'precision': 0.7414935111193366, 'recall': 0.6590821166214674, 'f1-score': 0.6819996262201755, 'support': 6000}, 'weighted avg': {'precision': 0.7974663073442727, 'recall': 0.8156666666666667, 'f1-score': 0.7969738980283912, 'support': 6000}}
+[[4392  281]
+ [ 825  502]]

@@ -1,0 +1,19 @@
+Best parameters set found on development set:
+Pipeline(memory=None,
+         steps=[('clf',
+                 DummyClassifier(constant=None, random_state=0,
+                                 strategy='prior'))],
+         verbose=False)
+Detailed classification report:
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+{'0': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 678}, '1': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 18021}, '2': {'precision': 0.04346129457099654, 'recall': 1.0, 'f1-score': 0.08330216903515333, 'support': 891}, '3': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 590}, '4': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 136}, '5': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 91}, '6': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 78}, '7': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 15}, '8': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 1}, 'accuracy': 0.04346129457099654, 'macro avg': {'precision': 0.004829032730110727, 'recall': 0.1111111111111111, 'f1-score': 0.00925579655946148, 'support': 20501}, 'weighted avg': {'precision': 0.0018888841257869331, 'recall': 0.04346129457099654, 'f1-score': 0.003620420106839746, 'support': 20501}}
+[[    0     0   678     0     0     0     0     0     0]
+ [    0     0 18021     0     0     0     0     0     0]
+ [    0     0   891     0     0     0     0     0     0]
+ [    0     0   590     0     0     0     0     0     0]
+ [    0     0   136     0     0     0     0     0     0]
+ [    0     0    91     0     0     0     0     0     0]
+ [    0     0    78     0     0     0     0     0     0]
+ [    0     0    15     0     0     0     0     0     0]
+ [    0     0     1     0     0     0     0     0     0]]

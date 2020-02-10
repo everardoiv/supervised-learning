@@ -1,0 +1,43 @@
+Tuning hyper-parameters for f1_macro
+AdaBoostClassifier Learning Curve - Credit Card - on f1_macro
+Best parameters found on development set:
+{'clf__learning_rate': 0.5, 'clf__n_estimators': 25}
+Best Pipeline:
+Pipeline(memory=None,
+         steps=[('transform',
+                 PowerTransformer(copy=True, method='yeo-johnson',
+                                  standardize=True)),
+                ('scale',
+                 RobustScaler(copy=True, quantile_range=(25.0, 75.0),
+                              with_centering=True, with_scaling=True)),
+                ('clf',
+                 AdaBoostClassifier(algorithm='SAMME.R',
+                                    base_estimator=DecisionTreeClassifier(ccp_alpha=0.0,
+                                                                          class_weight=None,
+                                                                          criterion='gini',
+                                                                          max_depth=5,
+                                                                          max_features=None,
+                                                                          max_leaf_nodes=None,
+                                                                          min_impurity_decrease=0.0,
+                                                                          min_impurity_split=None,
+                                                                          min_samples_leaf=51,
+                                                                          min_samples_split=2,
+                                                                          min_weight_fraction_leaf=0.0,
+                                                                          presort='deprecated',
+                                                                          random_state=42,
+                                                                          splitter='best'),
+                                    learning_rate=0.5, n_estimators=25,
+                                    random_state=None))],
+         verbose=False)
+Detailed classification report:
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+{'0': {'precision': 0.8338334583645911, 'recall': 0.9516267123287672, 'f1-score': 0.8888444622151139, 'support': 2336}, '1': {'precision': 0.6616766467065869, 'recall': 0.3328313253012048, 'f1-score': 0.44288577154308617, 'support': 664}, 'accuracy': 0.8146666666666667, 'macro avg': {'precision': 0.7477550525355889, 'recall': 0.642229018814986, 'f1-score': 0.6658651168791001, 'support': 3000}, 'weighted avg': {'precision': 0.7957294173842863, 'recall': 0.8146666666666667, 'f1-score': 0.7901389386797052, 'support': 3000}}
+[[2223  113]
+ [ 443  221]]
+
+-----------
+Cross-Val Accuracy: 0.82 (+/- 0.02)Cross-Val F1 Accuracy: 0.68 (+/- 0.03)
+-----------
+Normalized Accuracy: 0.81
+Non-Normalized Accuracy: 2444.00

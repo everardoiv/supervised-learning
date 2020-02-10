@@ -1,0 +1,27 @@
+Best parameters set found on development set:
+Pipeline(memory=None,
+         steps=[('transform',
+                 PowerTransformer(copy=True, method='yeo-johnson',
+                                  standardize=True)),
+                ('scale',
+                 RobustScaler(copy=True, quantile_range=(25.0, 75.0),
+                              with_centering=True, with_scaling=True)),
+                ('clf',
+                 MLPClassifier(activation='relu', alpha=1e-05,
+                               batch_size='auto', beta_1=0.9, beta_2=0.999,
+                               early_stopping=False, epsilon=1e-08,
+                               hidden_layer_sizes=(50,),
+                               learning_rate='constant',
+                               learning_rate_init=0.001, max_fun=15000,
+                               max_iter=9000, momentum=0.9, n_iter_no_change=10,
+                               nesterovs_momentum=True, power_t=0.5,
+                               random_state=None, shuffle=True, solver='adam',
+                               tol=0.0001, validation_fraction=0.1,
+                               verbose=False, warm_start=False))],
+         verbose=False)
+Detailed classification report:
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+{'0': {'precision': 0.8387096774193549, 'recall': 0.9402953135031029, 'f1-score': 0.8866020984665053, 'support': 4673}, '1': {'precision': 0.633377135348226, 'recall': 0.3632253202712886, 'f1-score': 0.4616858237547893, 'support': 1327}, 'accuracy': 0.8126666666666666, 'macro avg': {'precision': 0.7360434063837904, 'recall': 0.6517603168871957, 'f1-score': 0.6741439611106472, 'support': 6000}, 'weighted avg': {'precision': 0.7932969635312902, 'recall': 0.8126666666666666, 'f1-score': 0.7926247823760975, 'support': 6000}}
+[[4394  279]
+ [ 845  482]]

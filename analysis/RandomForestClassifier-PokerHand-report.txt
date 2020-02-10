@@ -1,0 +1,34 @@
+Best parameters set found on development set:
+Pipeline(memory=None,
+         steps=[('transform',
+                 PowerTransformer(copy=True, method='yeo-johnson',
+                                  standardize=True)),
+                ('scale',
+                 RobustScaler(copy=True, quantile_range=(25.0, 75.0),
+                              with_centering=True, with_scaling=True)),
+                ('clf',
+                 RandomForestClassifier(bootstrap=True, ccp_alpha=0.0,
+                                        class_weight=None, criterion='gini',
+                                        max_depth=16, max_features='auto',
+                                        max_leaf_nodes=None, max_samples=None,
+                                        min_impurity_decrease=0.0,
+                                        min_impurity_split=None,
+                                        min_samples_leaf=1, min_samples_split=2,
+                                        min_weight_fraction_leaf=0.0,
+                                        n_estimators=100, n_jobs=None,
+                                        oob_score=False, random_state=None,
+                                        verbose=0, warm_start=False))],
+         verbose=False)
+Detailed classification report:
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+{'0': {'precision': 0.08192873906550031, 'recall': 0.5663716814159292, 'f1-score': 0.14315004659832245, 'support': 678}, '1': {'precision': 0.9384726224783861, 'recall': 0.3614116863659064, 'f1-score': 0.5218540923841192, 'support': 18021}, '2': {'precision': 0.09616445916114791, 'recall': 0.7822671156004489, 'f1-score': 0.1712741122988082, 'support': 891}, '3': {'precision': 0.24624829467939974, 'recall': 0.611864406779661, 'f1-score': 0.35116731517509725, 'support': 590}, '4': {'precision': 0.6909090909090909, 'recall': 0.27941176470588236, 'f1-score': 0.3979057591623037, 'support': 136}, '5': {'precision': 0.918918918918919, 'recall': 0.7472527472527473, 'f1-score': 0.8242424242424243, 'support': 91}, '6': {'precision': 0.8571428571428571, 'recall': 0.3076923076923077, 'f1-score': 0.45283018867924535, 'support': 78}, '7': {'precision': 1.0, 'recall': 0.2, 'f1-score': 0.33333333333333337, 'support': 15}, '8': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 1}, 'accuracy': 0.39451734061753085, 'macro avg': {'precision': 0.5366427758172557, 'recall': 0.42847463442365363, 'f1-score': 0.3550841413192949, 'support': 20501}, 'weighted avg': {'precision': 0.8515767154082843, 'recall': 0.39451734061753085, 'f1-score': 0.48927487825123334, 'support': 20501}}
+[[ 384  211   78    5    0    0    0    0    0]
+ [4249 6513 6206 1027   17    6    3    0    0]
+ [  21  123  697   49    0    0    1    0    0]
+ [  16   77  136  361    0    0    0    0    0]
+ [   0    9   85    4   38    0    0    0    0]
+ [  17    5    1    0    0   68    0    0    0]
+ [   0    0   42   12    0    0   24    0    0]
+ [   0    2    2    8    0    0    0    3    0]
+ [   0    0    1    0    0    0    0    0    0]]

@@ -1,0 +1,47 @@
+Tuning hyper-parameters for f1_macro
+AdaBoostClassifier Learning Curve - Poker Hand - on f1_macro
+Best parameters found on development set:
+{'clf__learning_rate': 1.0, 'clf__n_estimators': 500}
+Best Pipeline:
+Pipeline(memory=None,
+         steps=[('scale',
+                 RobustScaler(copy=True, quantile_range=(25.0, 75.0),
+                              with_centering=True, with_scaling=True)),
+                ('clf',
+                 AdaBoostClassifier(algorithm='SAMME.R',
+                                    base_estimator=DecisionTreeClassifier(ccp_alpha=0.0,
+                                                                          class_weight=None,
+                                                                          criterion='gini',
+                                                                          max_depth=10,
+                                                                          max_features=None,
+                                                                          max_leaf_nodes=None,
+                                                                          min_impurity_decrease=0.0,
+                                                                          min_impurity_split=None,
+                                                   e                       min_samples_leaf=1,
+                                                                          min_samples_split=2,
+                                                                          min_weight_fraction_leaf=0.0,
+                                                                          presort='deprecated',
+                                                                          random_state=None,
+                                                                          splitter='best'),
+                                    learning_rate=1.0, n_estimators=500,
+                                    random_state=None))],
+         verbose=False)
+Detailed classification report:
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+{'0': {'precision': 0.09274630097437749, 'recall': 0.37905604719764013, 'f1-score': 0.14902870397216586, 'support': 678}, '1': {'precision': 0.9312812469365749, 'recall': 0.5271627545641197, 'f1-score': 0.6732336475090356, 'support': 18021}, '2': {'precision': 0.09400589584015723, 'recall': 0.6442199775533108, 'f1-score': 0.16407031584964984, 'support': 891}, '3': {'precision': 0.23843700159489634, 'recall': 0.5067796610169492, 'f1-score': 0.324295010845987, 'support': 590}, '4': {'precision': 0.711864406779661, 'recall': 0.3088235294117647, 'f1-score': 0.43076923076923074, 'support': 136}, '5': {'precision': 1.0, 'recall': 0.7362637362637363, 'f1-score': 0.8481012658227849, 'support': 91}, '6': {'precision': 1.0, 'recall': 0.4358974358974359, 'f1-score': 0.6071428571428571, 'support': 78}, '7': {'precision': 1.0, 'recall': 0.5333333333333333, 'f1-score': 0.6956521739130436, 'support': 15}, '8': {'precision': 1.0, 'recall': 1.0, 'f1-score': 1.0, 'support': 1}, 'accuracy': 0.5259255646066046, 'macro avg': {'precision': 0.674259428013963, 'recall': 0.5635040528042544, 'f1-score': 0.5435881339805283, 'support': 20501}, 'weighted avg': {'precision': 0.8463856390693746, 'recall': 0.5259255646066046, 'f1-score': 0.6226749664365132, 'support': 20501}}
+[[ 257  335   78    8    0    0    0    0    0]
+ [2466 9500 5164  874   17    0    0    0    0]
+ [  26  236  574   55    0    0    0    0    0]
+ [   7  106  178  299    0    0    0    0    0]
+ [   0   11   78    5   42    0    0    0    0]
+ [  15    9    0    0    0   67    0    0    0]
+ [   0    4   33    7    0    0   34    0    0]
+ [   0    0    1    6    0    0    0    8    0]
+ [   0    0    0    0    0    0    0    0    1]]
+
+-----------
+Cross-Val Accuracy: 0.68 (+/- 0.01)Cross-Val F1 Accuracy: 0.53 (+/- 0.09)
+-----------
+Normalized Accuracy: 0.53
+Non-Normalized Accuracy: 10782.00

@@ -1,0 +1,21 @@
+Best parameters set found on development set:
+Pipeline(memory=None,
+         steps=[('transform',
+                 PowerTransformer(copy=True, method='yeo-johnson',
+                                  standardize=True)),
+                ('scale',
+                 RobustScaler(copy=True, quantile_range=(25.0, 75.0),
+                              with_centering=True, with_scaling=True)),
+                ('clf',
+                 DummyClassifier(constant=None, random_state=0,
+                                 strategy='prior'))],
+         verbose=False)
+Detailed classification report:
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+{'0': {'precision': 0.5409836065573771, 'recall': 1.0, 'f1-score': 0.7021276595744682, 'support': 33}, '1': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 11}, '2': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 7}, '3': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 7}, '4': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 3}, 'accuracy': 0.5409836065573771, 'macro avg': {'precision': 0.10819672131147542, 'recall': 0.2, 'f1-score': 0.14042553191489365, 'support': 61}, 'weighted avg': {'precision': 0.2926632625638269, 'recall': 0.5409836065573771, 'f1-score': 0.3798395535402861, 'support': 61}}
+[[33  0  0  0  0]
+ [11  0  0  0  0]
+ [ 7  0  0  0  0]
+ [ 7  0  0  0  0]
+ [ 3  0  0  0  0]]

@@ -1,0 +1,24 @@
+Best parameters set found on development set:
+Pipeline(memory=None,
+         steps=[('transform',
+                 PowerTransformer(copy=True, method='yeo-johnson',
+                                  standardize=True)),
+                ('scale',
+                 RobustScaler(copy=True, quantile_range=(25.0, 75.0),
+                              with_centering=True, with_scaling=True)),
+                ('kernel_transform',
+                 Nystroem(coef0=None, degree=None, gamma=None, kernel='rbf',
+                          kernel_params=None, n_components=300,
+                          random_state=None)),
+                ('clf',
+                 KNeighborsClassifier(algorithm='auto', leaf_size=30,
+                                      metric='minkowski', metric_params=None,
+                                      n_jobs=None, n_neighbors=65, p=2,
+                                      weights='distance'))],
+         verbose=False)
+Detailed classification report:
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+{'0': {'precision': 0.8326139988740852, 'recall': 0.9494971110635566, 'f1-score': 0.8872225554889023, 'support': 4673}, '1': {'precision': 0.6482861400894188, 'recall': 0.3278070836473248, 'f1-score': 0.43543543543543545, 'support': 1327}, 'accuracy': 0.812, 'macro avg': {'precision': 0.740450069481752, 'recall': 0.6386520973554407, 'f1-score': 0.6613289954621688, 'support': 6000}, 'weighted avg': {'precision': 0.7918468207728764, 'recall': 0.812, 'f1-score': 0.7873023041037438, 'support': 6000}}
+[[4437  236]
+ [ 892  435]]

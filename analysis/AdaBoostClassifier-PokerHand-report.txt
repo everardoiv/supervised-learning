@@ -1,0 +1,40 @@
+Best parameters set found on development set:
+Pipeline(memory=None,
+         steps=[('transform',
+                 PowerTransformer(copy=True, method='yeo-johnson',
+                                  standardize=True)),
+                ('scale',
+                 RobustScaler(copy=True, quantile_range=(25.0, 75.0),
+                              with_centering=True, with_scaling=True)),
+                ('clf',
+                 AdaBoostClassifier(algorithm='SAMME.R',
+                                    base_estimator=DecisionTreeClassifier(ccp_alpha=0.0,
+                                                                          class_weight=None,
+                                                                          criterion='gini',
+                                                                          max_depth=10,
+                                                                          max_features=None,
+                                                                          max_leaf_nodes=None,
+                                                                          min_impurity_decrease=0.0,
+                                                                          min_impurity_split=None,
+                                                                          min_samples_leaf=1,
+                                                                          min_samples_split=2,
+                                                                          min_weight_fraction_leaf=0.0,
+                                                                          presort='deprecated',
+                                                                          random_state=None,
+                                                                          splitter='best'),
+                                    learning_rate=0.9, n_estimators=500,
+                                    random_state=None))],
+         verbose=False)
+Detailed classification report:
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+{'0': {'precision': 0.09097978227060653, 'recall': 0.34513274336283184, 'f1-score': 0.144, 'support': 678}, '1': {'precision': 0.9314867377899579, 'recall': 0.5281060984407081, 'f1-score': 0.6740562362773568, 'support': 18021}, '2': {'precision': 0.0923998738568275, 'recall': 0.6576879910213244, 'f1-score': 0.16203511682566019, 'support': 891}, '3': {'precision': 0.2804979253112033, 'recall': 0.5728813559322034, 'f1-score': 0.3766016713091922, 'support': 590}, '4': {'precision': 0.7586206896551724, 'recall': 0.3235294117647059, 'f1-score': 0.45360824742268047, 'support': 136}, '5': {'precision': 1.0, 'recall': 0.6703296703296703, 'f1-score': 0.8026315789473685, 'support': 91}, '6': {'precision': 1.0, 'recall': 0.5, 'f1-score': 0.6666666666666666, 'support': 78}, '7': {'precision': 1.0, 'recall': 0.4666666666666667, 'f1-score': 0.6363636363636364, 'support': 15}, '8': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 1}, 'accuracy': 0.5280718013755427, 'macro avg': {'precision': 0.5726650009870853, 'recall': 0.4515926597242345, 'f1-score': 0.43510701709028454, 'support': 20501}, 'weighted avg': {'precision': 0.8479099200734331, 'recall': 0.5280718013755427, 'f1-score': 0.6247326159210518, 'support': 20501}}
+[[ 234  366   76    2    0    0    0    0    0]
+ [2282 9517 5419  790   13    0    0    0    0]
+ [  35  214  586   56    0    0    0    0    0]
+ [   3   92  157  338    0    0    0    0    0]
+ [   0   13   73    6   44    0    0    0    0]
+ [  18   12    0    0    0   61    0    0    0]
+ [   0    3   30    6    0    0   39    0    0]
+ [   0    0    1    7    0    0    0    7    0]
+ [   0    0    0    0    1    0    0    0    0]]

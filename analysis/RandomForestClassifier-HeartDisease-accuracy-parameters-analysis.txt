@@ -1,0 +1,13 @@
+Tuning hyper-parameters for accuracy
+RandomForestClassifier Learning Curve - Heart Disease - on accuracy
+Best parameters found on development set:
+{'clf__max_depth': 7, 'clf__min_samples_leaf': 11, 'clf__n_estimators': 10}
+Detailed classification report:
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+{'0': {'precision': 0.8, 'recall': 0.9696969696969697, 'f1-score': 0.8767123287671234, 'support': 33}, '1': {'precision': 0.4444444444444444, 'recall': 0.36363636363636365, 'f1-score': 0.39999999999999997, 'support': 11}, '2': {'precision': 0.6666666666666666, 'recall': 0.2857142857142857, 'f1-score': 0.4, 'support': 7}, '3': {'precision': 0.2222222222222222, 'recall': 0.2857142857142857, 'f1-score': 0.25, 'support': 7}, '4': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 3}, 'accuracy': 0.6557377049180327, 'macro avg': {'precision': 0.42666666666666664, 'recall': 0.38095238095238093, 'f1-score': 0.3853424657534247, 'support': 61}, 'weighted avg': {'precision': 0.614936247723133, 'recall': 0.6557377049180327, 'f1-score': 0.621008309005165, 'support': 61}}
+[[32  0  0  1  0]
+ [ 5  4  0  2  0]
+ [ 1  1  2  3  0]
+ [ 2  3  0  2  0]
+ [ 0  1  1  1  0]]

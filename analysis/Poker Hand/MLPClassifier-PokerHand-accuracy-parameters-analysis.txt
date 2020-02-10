@@ -1,0 +1,17 @@
+Tuning hyper-parameters for accuracy
+MLPClassifier Learning Curve - Poker Hand - on accuracy
+Best parameters found on development set:
+{'clf__alpha': 1e-05, 'clf__hidden_layer_sizes': (100, 2), 'clf__max_iter': 9000, 'clf__solver': 'adam'}
+Detailed classification report:
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+{'0': {'precision': 0.8678996036988111, 'recall': 0.9690265486725663, 'f1-score': 0.9156794425087109, 'support': 678}, '1': {'precision': 0.999719840869614, 'recall': 0.9900671438876866, 'f1-score': 0.9948700791792127, 'support': 18021}, '2': {'precision': 0.9672489082969432, 'recall': 0.9943883277216611, 'f1-score': 0.9806308799114555, 'support': 891}, '3': {'precision': 0.9809358752166378, 'recall': 0.9593220338983051, 'f1-score': 0.9700085689802914, 'support': 590}, '4': {'precision': 0.5159817351598174, 'recall': 0.8308823529411765, 'f1-score': 0.6366197183098592, 'support': 136}, '5': {'precision': 0.91, 'recall': 1.0, 'f1-score': 0.9528795811518325, 'support': 91}, '6': {'precision': 0.9714285714285714, 'recall': 0.8717948717948718, 'f1-score': 0.9189189189189189, 'support': 78}, '7': {'precision': 1.0, 'recall': 1.0, 'f1-score': 1.0, 'support': 15}, '8': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 1}, 'accuracy': 0.9871713574947564, 'macro avg': {'precision': 0.801468281630044, 'recall': 0.8461645865462519, 'f1-score': 0.8188452432178089, 'support': 20501}, 'weighted avg': {'precision': 0.9896450452096319, 'recall': 0.9871713574947564, 'f1-score': 0.9880200735505394, 'support': 20501}}
+[[  657     0     0     0    20     1     0     0     0]
+ [   85 17842     8     0    86     0     0     0     0]
+ [    0     4   886     1     0     0     0     0     0]
+ [    0     0    22   566     0     0     2     0     0]
+ [   15     1     0     0   113     7     0     0     0]
+ [    0     0     0     0     0    91     0     0     0]
+ [    0     0     0    10     0     0    68     0     0]
+ [    0     0     0     0     0     0     0    15     0]
+ [    0     0     0     0     0     1     0     0     0]]

@@ -1,0 +1,13 @@
+Tuning hyper-parameters for f1_macro
+AdaBoostClassifier Learning Curve - Heart Disease - on f1_macro
+Best parameters found on development set:
+{'clf__learning_rate': 1.0, 'clf__n_estimators': 100}
+Detailed classification report:
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+{'0': {'precision': 0.8846153846153846, 'recall': 0.696969696969697, 'f1-score': 0.7796610169491526, 'support': 33}, '1': {'precision': 0.16666666666666666, 'recall': 0.18181818181818182, 'f1-score': 0.17391304347826086, 'support': 11}, '2': {'precision': 0.2, 'recall': 0.2857142857142857, 'f1-score': 0.23529411764705882, 'support': 7}, '3': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 7}, '4': {'precision': 0.5, 'recall': 0.6666666666666666, 'f1-score': 0.5714285714285715, 'support': 3}, 'accuracy': 0.47540983606557374, 'macro avg': {'precision': 0.35025641025641024, 'recall': 0.3662337662337662, 'f1-score': 0.3520593499006088, 'support': 61}, 'weighted avg': {'precision': 0.5561580496006725, 'recall': 0.47540983606557374, 'f1-score': 0.5082492061540661, 'support': 61}}
+[[23  7  2  1  0]
+ [ 2  2  3  3  1]
+ [ 1  0  2  4  0]
+ [ 0  3  3  0  1]
+ [ 0  0  0  1  2]]

@@ -1,0 +1,41 @@
+Tuning hyper-parameters for accuracy
+MLPClassifier Learning Curve - Poker Hand - on accuracy
+Best parameters found on development set:
+{'clf__alpha': 1e-05, 'clf__hidden_layer_sizes': (100, 2), 'clf__max_iter': 9000, 'clf__solver': 'adam'}
+Best Pipeline:
+Pipeline(memory=None,
+         steps=[('scale',
+                 RobustScaler(copy=True, quantile_range=(25.0, 75.0),
+                              with_centering=True, with_scaling=True)),
+                ('clf',
+                 MLPClassifier(activation='relu', alpha=1e-05,
+                               batch_size='auto', beta_1=0.9, beta_2=0.999,
+                               early_stopping=False, epsilon=1e-08,
+                               hidden_layer_sizes=(100, 2),
+                               learning_rate='constant',
+                               learning_rate_init=0.001, max_fun=15000,
+                               max_iter=9000, momentum=0.9, n_iter_no_change=10,
+                               nesterovs_momentum=True, power_t=0.5,
+                               random_state=None, shuffle=True, solver='adam',
+                               tol=0.0001, validation_fraction=0.1,
+                               verbose=False, warm_start=False))],
+         verbose=False)
+Detailed classification report:
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+{'0': {'precision': 0.5437864887406172, 'recall': 0.9616519174041298, 'f1-score': 0.6947256259989345, 'support': 678}, '1': {'precision': 0.9971223021582734, 'recall': 0.9229232562010987, 'f1-score': 0.958589089651595, 'support': 18021}, '2': {'precision': 0.5511171293161814, 'recall': 0.9135802469135802, 'f1-score': 0.6874999999999999, 'support': 891}, '3': {'precision': 0.8909710391822828, 'recall': 0.8864406779661017, 'f1-score': 0.8887000849617672, 'support': 590}, '4': {'precision': 0.2971576227390181, 'recall': 0.8455882352941176, 'f1-score': 0.4397705544933078, 'support': 136}, '5': {'precision': 0.989010989010989, 'recall': 0.989010989010989, 'f1-score': 0.989010989010989, 'support': 91}, '6': {'precision': 0.953125, 'recall': 0.782051282051282, 'f1-score': 0.8591549295774649, 'support': 78}, '7': {'precision': 0.9375, 'recall': 1.0, 'f1-score': 0.967741935483871, 'support': 15}, '8': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 1}, 'accuracy': 0.922003804692454, 'macro avg': {'precision': 0.6844211745719291, 'recall': 0.8112496227601445, 'f1-score': 0.7205770232419921, 'support': 20501}, 'weighted avg': {'precision': 0.954751778381111, 'recall': 0.922003804692454, 'f1-score': 0.9323443987179408, 'support': 20501}}
+[[  652    14     0     0    12     0     0     0     0]
+ [  531 16632   600     1   257     0     0     0     0]
+ [    0    27   814    47     3     0     0     0     0]
+ [    0     1    63   523     0     0     3     0     0]
+ [   15     6     0     0   115     0     0     0     0]
+ [    1     0     0     0     0    90     0     0     0]
+ [    0     0     0    16     0     0    61     1     0]
+ [    0     0     0     0     0     0     0    15     0]
+ [    0     0     0     0     0     1     0     0     0]]
+
+-----------
+Cross-Val Accuracy: 0.95 (+/- 0.05)Cross-Val F1 Accuracy: 0.74 (+/- 0.03)
+-----------
+Normalized Accuracy: 0.92
+Non-Normalized Accuracy: 18902.00

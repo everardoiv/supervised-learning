@@ -1,0 +1,13 @@
+Tuning hyper-parameters for f1_macro
+DecisionTreeClassifier Learning Curve - Heart Disease - on f1_macro
+Best parameters found on development set:
+{'clf__criterion': 'gini', 'clf__max_depth': 17, 'clf__max_features': 3, 'clf__min_samples_split': 10}
+Detailed classification report:
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+{'0': {'precision': 0.7878787878787878, 'recall': 0.7878787878787878, 'f1-score': 0.7878787878787878, 'support': 33}, '1': {'precision': 0.4444444444444444, 'recall': 0.36363636363636365, 'f1-score': 0.39999999999999997, 'support': 11}, '2': {'precision': 0.3333333333333333, 'recall': 0.42857142857142855, 'f1-score': 0.375, 'support': 7}, '3': {'precision': 0.25, 'recall': 0.2857142857142857, 'f1-score': 0.26666666666666666, 'support': 7}, '4': {'precision': 0.5, 'recall': 0.3333333333333333, 'f1-score': 0.4, 'support': 3}, 'accuracy': 0.5901639344262295, 'macro avg': {'precision': 0.46313131313131317, 'recall': 0.43982683982683984, 'f1-score': 0.4459090909090909, 'support': 61}, 'weighted avg': {'precision': 0.5979052823315119, 'recall': 0.5901639344262295, 'f1-score': 0.5916666666666667, 'support': 61}}
+[[26  3  1  2  1]
+ [ 5  4  2  0  0]
+ [ 1  0  3  3  0]
+ [ 1  2  2  2  0]
+ [ 0  0  1  1  1]]

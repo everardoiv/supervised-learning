@@ -1,0 +1,28 @@
+Best parameters set found on development set:
+Pipeline(memory=None,
+         steps=[('transform',
+                 PowerTransformer(copy=True, method='yeo-johnson',
+                                  standardize=True)),
+                ('scale',
+                 RobustScaler(copy=True, quantile_range=(25.0, 75.0),
+                              with_centering=True, with_scaling=True)),
+                ('clf',
+                 RandomForestClassifier(bootstrap=True, ccp_alpha=0.0,
+                                        class_weight=None, criterion='gini',
+                                        max_depth=10, max_features='auto',
+                                        max_leaf_nodes=None, max_samples=None,
+                                        min_impurity_decrease=0.0,
+                                        min_impurity_split=None,
+                                        min_samples_leaf=21,
+                                        min_samples_split=2,
+                                        min_weight_fraction_leaf=0.0,
+                                        n_estimators=1000, n_jobs=None,
+                                        oob_score=False, random_state=None,
+                                        verbose=0, warm_start=False))],
+         verbose=False)
+Detailed classification report:
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+{'0': {'precision': 0.837822565454888, 'recall': 0.9518510592766959, 'f1-score': 0.8912041675015028, 'support': 4673}, '1': {'precision': 0.6743849493487699, 'recall': 0.35116804822908815, 'f1-score': 0.4618434093161546, 'support': 1327}, 'accuracy': 0.819, 'macro avg': {'precision': 0.756103757401829, 'recall': 0.651509553752892, 'f1-score': 0.6765237884088287, 'support': 6000}, 'weighted avg': {'precision': 0.8016756126927514, 'recall': 0.819, 'f1-score': 0.7962438798161766, 'support': 6000}}
+[[4448  225]
+ [ 861  466]]
